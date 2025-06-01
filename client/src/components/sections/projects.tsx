@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
 import { useScrollReveal } from "@/hooks/use-scroll-reveal";
+import { trackEvent } from "@/lib/analytics";
 
 export default function ProjectsSection() {
   const [isFigmaModalOpen, setIsFigmaModalOpen] = useState(false);

@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { PencilRuler, Palette } from "lucide-react";
+import { trackEvent } from "@/lib/analytics";
 
 export default function HeroSection() {
   const handleNavClick = (href: string) => {
@@ -29,7 +30,10 @@ export default function HeroSection() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <motion.button
-              onClick={() => handleNavClick("#projects")}
+              onClick={() => {
+                trackEvent('view_work_clicked', 'engagement', 'hero_section');
+                handleNavClick("#projects");
+              }}
               className="bg-primary text-white px-8 py-4 rounded-full hover:bg-blue-700 transition-all duration-300 font-medium"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
@@ -38,6 +42,7 @@ export default function HeroSection() {
             </motion.button>
             <motion.button
               onClick={() => {
+                trackEvent('resume_download', 'conversion', 'hero_section');
                 const link = document.createElement("a");
                 link.href = "/api/resume";
                 link.download = "Alex_Chen_Resume.pdf";
@@ -52,7 +57,10 @@ export default function HeroSection() {
               Download Resume
             </motion.button>
             <motion.button
-              onClick={() => handleNavClick("#contact")}
+              onClick={() => {
+                trackEvent('contact_clicked', 'engagement', 'hero_section');
+                handleNavClick("#contact");
+              }}
               className="border-2 border-primary text-primary px-8 py-4 rounded-full hover:bg-primary hover:text-white transition-all duration-300 font-medium"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
