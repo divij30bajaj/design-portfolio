@@ -19,7 +19,6 @@ export default function ExperienceSection() {
       skills: ["Design Systems", "Enterprise UX", "AI/ML Design"],
       icon: Briefcase,
       color: "primary",
-      side: "left",
     },
     {
       title: "Product Designer",
@@ -34,7 +33,6 @@ export default function ExperienceSection() {
       skills: ["E-commerce", "Mobile Design", "User Research"],
       icon: Rocket,
       color: "accent",
-      side: "right",
     },
     {
       title: "UX Designer",
@@ -49,7 +47,6 @@ export default function ExperienceSection() {
       skills: ["Travel Tech", "Accessibility", "Conversion Optimization"],
       icon: Sprout,
       color: "green-500",
-      side: "left",
     },
   ];
 
@@ -69,10 +66,7 @@ export default function ExperienceSection() {
           </p>
         </motion.div>
         
-        <div className="relative">
-          {/* Timeline Line */}
-          <div className="absolute left-4 md:left-1/2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-primary to-accent transform md:-translate-x-0.5"></div>
-          
+        <div className="space-y-8">
           {experiences.map((experience, index) => {
             const { ref, isVisible } = useScrollReveal();
             
@@ -83,35 +77,40 @@ export default function ExperienceSection() {
                 initial={{ opacity: 0, y: 50 }}
                 animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
                 transition={{ duration: 0.8, ease: "easeOut", delay: index * 0.1 }}
-                className="relative mb-12"
+                className="bg-gray-50 rounded-2xl p-8 hover-lift"
               >
-                <div className="flex items-center mb-4">
-                  <div className={`w-8 h-8 bg-${experience.color} rounded-full flex items-center justify-center absolute left-0 md:left-1/2 transform md:-translate-x-1/2`}>
-                    <experience.icon className="text-white w-4 h-4" />
+                <div className="flex flex-col md:flex-row md:items-start gap-6">
+                  <div className="flex items-center gap-4 md:flex-col md:items-center md:w-32 flex-shrink-0">
+                    <div className={`w-12 h-12 ${
+                      experience.color === "primary" 
+                        ? "bg-primary"
+                        : experience.color === "accent"
+                        ? "bg-accent"
+                        : "bg-green-500"
+                    } rounded-full flex items-center justify-center`}>
+                      <experience.icon className="text-white w-6 h-6" />
+                    </div>
+                    <p className="text-accent font-bold text-lg md:text-center md:mt-2">
+                      {experience.period}
+                    </p>
                   </div>
-                </div>
-                
-                <div className={`ml-12 md:ml-0 ${
-                  experience.side === "left" 
-                    ? "md:w-1/2 md:pr-8 md:text-right" 
-                    : "md:w-1/2 md:ml-auto md:pl-8"
-                }`}>
-                  <div className="bg-gray-50 rounded-2xl p-6 hover-lift">
+                  
+                  <div className="flex-1">
                     <h3 className="text-2xl font-semibold text-secondary mb-2">
                       {experience.title}
                     </h3>
-                    <p className="text-primary font-medium mb-2">
+                    <p className="text-primary font-medium text-lg mb-4">
                       {experience.company}
                     </p>
-                    <p className="text-accent font-medium mb-4">
-                      {experience.period}
-                    </p>
-                    <p className="text-slate mb-4">
+                    <p className="text-slate mb-4 leading-relaxed">
                       {experience.description}
                     </p>
-                    <ul className="text-slate text-sm space-y-2 mb-4">
+                    <ul className="text-slate space-y-2 mb-6">
                       {experience.achievements.map((achievement, i) => (
-                        <li key={i}>• {achievement}</li>
+                        <li key={i} className="flex items-start">
+                          <span className="text-primary mr-2 mt-1">•</span>
+                          {achievement}
+                        </li>
                       ))}
                     </ul>
                     <div className="flex flex-wrap gap-2">
@@ -124,7 +123,7 @@ export default function ExperienceSection() {
                               : experience.color === "accent"
                               ? "bg-accent/10 text-accent"
                               : "bg-green-100 text-green-700"
-                          } px-3 py-1 rounded-full text-sm`}
+                          } px-4 py-2 rounded-full text-sm font-medium`}
                         >
                           {skill}
                         </span>

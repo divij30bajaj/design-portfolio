@@ -166,21 +166,7 @@ export default function ContactSection() {
               </Button>
             </div>
             
-            {/* Social Links */}
-            <div className="mt-8">
-              <h4 className="font-semibold mb-4">Connect With Me</h4>
-              <div className="flex space-x-4">
-                {socialLinks.map((social, index) => (
-                  <a
-                    key={index}
-                    href={social.href}
-                    className={`w-10 h-10 ${social.color} rounded-full flex items-center justify-center transition-colors`}
-                  >
-                    <social.icon className="text-white w-4 h-4" />
-                  </a>
-                ))}
-              </div>
-            </div>
+
           </motion.div>
           
           {/* Contact Form */}

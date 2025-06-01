@@ -22,7 +22,7 @@ export default function HeroSection() {
           transition={{ duration: 0.8, ease: "easeOut" }}
         >
           <h1 className="text-5xl md:text-7xl font-playfair font-bold mb-6">
-            <span className="gradient-text">Product Designer</span>
+            <span className="gradient-text">Alex Chen</span>
           </h1>
           <p className="text-xl md:text-2xl text-slate mb-8 max-w-3xl mx-auto leading-relaxed">
             Creating intuitive digital experiences that bridge user needs with business goals through thoughtful design and strategic thinking.
@@ -35,6 +35,21 @@ export default function HeroSection() {
               whileTap={{ scale: 0.95 }}
             >
               View My Work
+            </motion.button>
+            <motion.button
+              onClick={() => {
+                const link = document.createElement("a");
+                link.href = "/api/resume";
+                link.download = "Alex_Chen_Resume.pdf";
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+              }}
+              className="border-2 border-accent text-accent px-8 py-4 rounded-full hover:bg-accent hover:text-white transition-all duration-300 font-medium"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              Download Resume
             </motion.button>
             <motion.button
               onClick={() => handleNavClick("#contact")}
