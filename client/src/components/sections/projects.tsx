@@ -9,29 +9,30 @@ export default function ProjectsSection() {
 
   const mainProjects = [
     {
-      title: "AI Customer Support Chatbot",
-      description: "Designed a conversational interface for handling complex customer service scenarios. The wireframe demonstrates various user input patterns and system responses to create natural, helpful interactions.",
+      title: "Kashibot: Conversational Design for Heritage Sites | Banaras Hindu University | August 2023",
+      description: "A multilingual chatbot built to enhance the tourist experience across Varanasi's major temples, integrating real-time info on aarti schedules, tickets, locations, and cultural insights in Hindi, English, and Telugu. Developed full conversation flows, bot and user personas, and architecture on Figma.",
       image: "https://images.unsplash.com/photo-1551650975-87deedd944c3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1200&h=800",
-      features: [
-        "Natural language processing for intent recognition",
-        "Multi-step conversation flows with context preservation",
-        "Seamless handoff to human agents when needed",
-        "Personalized responses based on user history",
-      ],
-      skills: ["Conversational UI", "Wireframing", "User Flow"],
       hasFigma: true,
     },
     {
-      title: "Mobile Banking Experience",
-      description: "Redesigned mobile banking app to improve user engagement and reduce customer service calls. Focus on intuitive navigation and proactive financial insights.",
+      title: "Respin Transcription Proect | IISC, Bangalore | March 2023",
+      description: "Conducted phonetic transcription of Hindi audio files collected manually from native speakers related to Agriculture and Finance sectors",
       image: "https://images.unsplash.com/photo-1563986768494-4dee2763ff3f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1200&h=800",
       impact: [
-        { metric: "40%", description: "Increase in app usage" },
-        { metric: "25%", description: "Reduction in support calls" },
+        { description: "Worked closely with tools like Rev, Wavesurfer" },
       ],
-      skills: ["FinTech", "Mobile Design", "Data Visualization"],
       hasFigma: false,
     },
+    {
+      title: "Hindi Morphological Generator | Banaras Hindu University |February 2023",
+      description: "Built a Python-based NLP tool to generate root forms and inflected Hindi nouns",
+      image: "https://images.unsplash.com/photo-1563986768494-4dee2763ff3f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1200&h=800",
+      impact: [
+        { description: "Automated morphological analysis for gender, number, and case variations." },
+      ],
+      hasFigma: false,
+    },
+    
   ];
 
   const additionalProjects = [
@@ -107,19 +108,6 @@ export default function ProjectsSection() {
                   </div>
                   <p className="text-slate mb-6">{project.description}</p>
                   
-                  {project.features && (
-                    <div className="space-y-4">
-                      <div>
-                        <h4 className="font-semibold text-secondary mb-2">Key Features:</h4>
-                        <ul className="text-slate text-sm space-y-1">
-                          {project.features.map((feature, i) => (
-                            <li key={i}>• {feature}</li>
-                          ))}
-                        </ul>
-                      </div>
-                    </div>
-                  )}
-                  
                   {project.impact && (
                     <div className="space-y-4">
                       <div>
@@ -127,7 +115,6 @@ export default function ProjectsSection() {
                         <div className="grid grid-cols-2 gap-4">
                           {project.impact.map((item, i) => (
                             <div key={i} className="text-center">
-                              <p className="text-2xl font-bold text-accent">{item.metric}</p>
                               <p className="text-sm text-slate">{item.description}</p>
                             </div>
                           ))}
@@ -135,21 +122,6 @@ export default function ProjectsSection() {
                       </div>
                     </div>
                   )}
-                  
-                  <div className="flex flex-wrap gap-2 mt-6">
-                    {project.skills.map((skill) => (
-                      <span
-                        key={skill}
-                        className={`${
-                          index === 0 
-                            ? "bg-primary/10 text-primary" 
-                            : "bg-accent/10 text-accent"
-                        } px-3 py-1 rounded-full text-sm`}
-                      >
-                        {skill}
-                      </span>
-                    ))}
-                  </div>
                 </div>
               </motion.div>
             );

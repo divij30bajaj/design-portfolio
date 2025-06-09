@@ -6,17 +6,16 @@ export default function AboutSection() {
 
   const skills = [
     "User Experience Design",
-    "User Interface Design", 
-    "Prototyping & Wireframing",
-    "Design Systems",
     "User Research",
-    "Interaction Design",
     "Figma",
-    "Sketch",
-    "Adobe Creative Suite",
-    "HTML/CSS",
-    "JavaScript",
-    "React"
+    "Freshdesk",
+    "Strapi",
+    "CMS",
+    "TMS",
+    "Qliksense",
+    "JIRA",
+    "Brahma Fabricator",
+    "Python"
   ];
 
   return (
@@ -34,19 +33,14 @@ export default function AboutSection() {
             <div className="lg:w-1/3">
               <img
                 src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&h=500"
-                alt="Alex Chen - Product Designer"
+                alt="Shyamali Panda - Process Designer"
                 className="rounded-2xl shadow-lg w-full max-w-sm float-left mr-8 mb-4 lg:mb-0"
               />
             </div>
             
             <div className="lg:w-2/3">
               <p className="text-lg text-slate mb-6 leading-relaxed">
-                I'm a passionate product designer with 5+ years of experience crafting user-centered digital solutions. 
-                My approach combines strategic thinking with creative problem-solving to deliver products that users love and businesses thrive on.
-              </p>
-              <p className="text-lg text-slate mb-8 leading-relaxed">
-                I believe great design is invisible – it simply works. My mission is to eliminate friction between users and their goals, 
-                creating experiences that feel natural and delightful. I specialize in enterprise software, mobile applications, and design systems.
+              I’ve always been drawn to how things work behind the scenes. In my current role, I curate Hindi content and app experiences for the Indus Appstore across Xiaomi and Lava devices. I love creating process flows, breaking down data, and designing systems that feel intuitive. Chatbots and language tech fascinate me, and I’m now working toward a transition into process design, where I hope to grow into a product leadership role.
               </p>
               
               {/* Skills Section */}

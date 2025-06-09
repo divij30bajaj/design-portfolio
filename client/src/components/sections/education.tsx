@@ -8,21 +8,19 @@ export default function EducationSection() {
 
   const educationData = [
     {
-      degree: "Master of Design in Interaction Design",
-      institution: "Carnegie Mellon University",
-      description: "Specialized in human-computer interaction, design research methods, and prototyping. Thesis focused on conversational UI design patterns for complex workflows.",
-      period: "2019 - 2021",
-      gpa: "GPA: 3.9/4.0",
-      skills: ["HCI Research", "Design Systems", "Prototyping"],
+      degree: "M.A. Linguistics",
+      institution: "Banaras Hindu University",
+      description: "More focus on computational linguistics which leniency on Hindi. Created Morphological generator, carried out experiments while Hindi being the focus language.",
+      period: "2021 - 2023",
+      gpa: "GPA: 8",
       color: "primary",
     },
     {
-      degree: "Bachelor of Science in Computer Science",
-      institution: "University of California, Berkeley",
-      description: "Strong technical foundation with coursework in algorithms, software engineering, and human-computer interaction. Led the design team for the university's student portal redesign project.",
-      period: "2015 - 2019",
-      gpa: "Magna Cum Laude",
-      skills: ["Software Engineering", "Data Structures", "UI Development"],
+      degree: "B.A. English Hons.",
+      institution: "Banaras Hindu University",
+      description: "Language and Literature, Linguistics, Philosophy, Sanskrit",
+      period: "2018 - 2021",
+      gpa: "GPA: 8.5",
       color: "accent",
     },
   ];
@@ -68,20 +66,6 @@ export default function EducationSection() {
                     <p className="text-slate mb-4">
                       {education.description}
                     </p>
-                    <div className="flex flex-wrap gap-2">
-                      {education.skills.map((skill) => (
-                        <span
-                          key={skill}
-                          className={`${
-                            education.color === "primary" 
-                              ? "bg-primary/10 text-primary" 
-                              : "bg-accent/10 text-accent"
-                          } px-3 py-1 rounded-full text-sm`}
-                        >
-                          {skill}
-                        </span>
-                      ))}
-                    </div>
                   </div>
                   <div className="mt-4 md:mt-0 md:ml-8 text-right">
                     <p className="text-2xl font-bold text-accent">

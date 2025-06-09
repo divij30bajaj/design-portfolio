@@ -87,27 +87,20 @@ export default function ContactSection() {
   const contactInfo = [
     {
       icon: Mail,
-      title: "alex.chen@email.com",
+      title: "shyamalijsr790@gmail.com",
       subtitle: "Drop me a line anytime",
       color: "bg-primary",
     },
     {
       icon: Phone,
-      title: "+1 (555) 123-4567",
-      subtitle: "Available Mon-Fri, 9am-6pm PST",
+      title: "+91-7903937163",
+      subtitle: "Available Mon-Fri, 9am-6pm IST",
       color: "bg-accent",
-    },
-    {
-      icon: MapPin,
-      title: "San Francisco, CA",
-      subtitle: "Open to remote opportunities",
-      color: "bg-green-500",
     },
   ];
 
   const socialLinks = [
-    { icon: Linkedin, href: "#", color: "bg-blue-600 hover:bg-blue-700" },
-    { icon: Github, href: "#", color: "bg-gray-600 hover:bg-gray-700" },
+    { icon: Linkedin, href: "https://www.linkedin.com/in/shyamali-panda-6152a1185/", color: "bg-blue-600 hover:bg-blue-700" },
   ];
 
   return (

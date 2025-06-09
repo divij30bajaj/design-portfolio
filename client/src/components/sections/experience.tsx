@@ -7,46 +7,34 @@ export default function ExperienceSection() {
 
   const experiences = [
     {
-      title: "Senior Product Designer",
-      company: "Slack Technologies",
-      period: "2022 - Present",
-      description: "Leading design for enterprise collaboration features, focusing on workflow automation and AI-assisted productivity tools. Collaborated with cross-functional teams to ship features used by millions of users daily.",
+      title: "Localization Executive",
+      company: "PhonePe – Indus Appstore",
+      period: "October 2023 - Present",
+      description: "As the Hindi Localization Executive for Indus Appstore—a homegrown alternative to Google Play tailored for Indian regional users—I’ve led the end-to-end process of language adaptation, personalized app curation, and performance-driven content rollout. My role bridges content, design, and data, with a focus on improving discoverability and user engagement through scalable and structured workflow",
       achievements: [
-        "Designed workflow builder that increased user productivity by 40%",
-        "Led design system evolution supporting 10+ product areas",
-        "Mentored 3 junior designers and established design critique processes",
+        "Scaled Hindi installs from 24K to 75K in 12 months through curated app collections, push campaigns, and homepage optimizations.",
+        "Boosted Installers-to-DAU conversion from 18% to 58% by refining content flow logic and prioritizing high-intent app placements.",
+        "Doubled average installs per user from 0.25 to 0.55, enhancing user journeys with trend-based and category-specific content.",
+        "Maintained a steady 15–18% DAU contribution from Hindi content, showcasing strong regional engagement.",
+        "Spearheaded an ongoing Transliteration Tool Project using phonemic mapping—leading a team of 11 to automate app title transliteration, reducing manual effort and turnaround time by 40%.",
+        "Authored SOPs for localization and rollout processes—cutting content release time by 30% and enabling smooth cross-functional handoffs.",
+        "Developed a modular curation system to support multilingual scaling and reduce dependency on manual tagging."
       ],
-      skills: ["Design Systems", "Enterprise UX", "AI/ML Design"],
       icon: Briefcase,
       color: "primary",
     },
     {
-      title: "Product Designer",
-      company: "Shopify",
-      period: "2021 - 2022",
-      description: "Focused on merchant experience for point-of-sale systems and inventory management. Drove design decisions for features serving 1M+ merchants globally.",
+      title: "Technical Content Developer",
+      company: "Lysto",
+      period: "February 2023- September 2023",
+      description: "Worked on building Web3 gamer-centric virtual support experiences while supporting content operations, SEO, and community engagement.",
       achievements: [
-        "Redesigned POS interface reducing checkout time by 25%",
-        "Created mobile-first inventory management system",
-        "Conducted user research across 5 international markets",
+        "Designed and deployed FAQ-based conversational flows on FreshDesk for virtual assistant for the platform.",
+        "Led weekly Ask Me Anything (AMA) sessions with gamers to understand pain points and improve platform onboarding—personally hosted and transcribed sessions for content insights.",
+        "Conducted keyword research and content optimization to boost SEO visibility and organic reach for Web 3 gaming-related support content."
       ],
-      skills: ["E-commerce", "Mobile Design", "User Research"],
       icon: Rocket,
       color: "accent",
-    },
-    {
-      title: "UX Designer",
-      company: "Airbnb",
-      period: "2019 - 2021",
-      description: "Designed host tools and booking experiences. Specialized in international markets and accessibility improvements. Worked closely with data science team to optimize conversion funnels.",
-      achievements: [
-        "Improved host onboarding completion rate by 35%",
-        "Led accessibility initiative reaching WCAG AA compliance",
-        "Designed features for emerging markets in SE Asia",
-      ],
-      skills: ["Travel Tech", "Accessibility", "Conversion Optimization"],
-      icon: Sprout,
-      color: "green-500",
     },
   ];
 
@@ -113,22 +101,6 @@ export default function ExperienceSection() {
                         </li>
                       ))}
                     </ul>
-                    <div className="flex flex-wrap gap-2">
-                      {experience.skills.map((skill) => (
-                        <span
-                          key={skill}
-                          className={`${
-                            experience.color === "primary" 
-                              ? "bg-primary/10 text-primary"
-                              : experience.color === "accent"
-                              ? "bg-accent/10 text-accent"
-                              : "bg-green-100 text-green-700"
-                          } px-4 py-2 rounded-full text-sm font-medium`}
-                        >
-                          {skill}
-                        </span>
-                      ))}
-                    </div>
                   </div>
                 </div>
               </motion.div>

@@ -23,10 +23,10 @@ export default function HeroSection() {
           transition={{ duration: 0.8, ease: "easeOut" }}
         >
           <h1 className="text-5xl md:text-7xl font-playfair font-bold mb-6">
-            <span className="gradient-text">Alex Chen</span>
+            <span className="gradient-text">Shyamali Panda</span>
           </h1>
           <p className="text-xl md:text-2xl text-slate mb-8 max-w-3xl mx-auto leading-relaxed">
-            Creating intuitive digital experiences that bridge user needs with business goals through thoughtful design and strategic thinking.
+          From app curation to user flows — crafting seamless journeys that lead from content to product.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <motion.button
