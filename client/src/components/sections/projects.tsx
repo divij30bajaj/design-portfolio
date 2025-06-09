@@ -35,30 +35,6 @@ export default function ProjectsSection() {
     
   ];
 
-  const additionalProjects = [
-    {
-      title: "Checkout Optimization",
-      description: "Streamlined e-commerce checkout reducing cart abandonment by 30%.",
-      image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600",
-      skills: ["E-commerce", "Conversion"],
-      color: "green",
-    },
-    {
-      title: "Analytics Dashboard",
-      description: "Enterprise dashboard for complex data visualization and reporting.",
-      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600",
-      skills: ["Enterprise", "Data Viz"],
-      color: "purple",
-    },
-    {
-      title: "Social Network App",
-      description: "Community-focused platform emphasizing meaningful connections.",
-      image: "https://images.unsplash.com/photo-1611224923853-80b023f02d71?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600",
-      skills: ["Social", "Community"],
-      color: "pink",
-    },
-  ];
-
   return (
     <section id="projects" className="py-20 bg-gradient-to-br from-neutral via-purple-50 to-pink-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -128,49 +104,6 @@ export default function ProjectsSection() {
           })}
         </div>
         
-        {/* Additional Projects Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {additionalProjects.map((project, index) => {
-            const { ref, isVisible } = useScrollReveal();
-            
-            return (
-              <motion.div
-                key={project.title}
-                ref={ref}
-                initial={{ opacity: 0, y: 50 }}
-                animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
-                transition={{ duration: 0.8, ease: "easeOut", delay: index * 0.1 }}
-                className="bg-white rounded-2xl overflow-hidden shadow-lg hover-lift"
-              >
-                <img
-                  src={project.image}
-                  alt={project.title}
-                  className="w-full h-48 object-cover"
-                />
-                <div className="p-6">
-                  <h3 className="text-xl font-semibold text-secondary mb-2">{project.title}</h3>
-                  <p className="text-slate text-sm mb-4">{project.description}</p>
-                  <div className="flex flex-wrap gap-2">
-                    {project.skills.map((skill) => (
-                      <span
-                        key={skill}
-                        className={`${
-                          project.color === "green" 
-                            ? "bg-green-100 text-green-700"
-                            : project.color === "purple"
-                            ? "bg-purple-100 text-purple-700"
-                            : "bg-pink-100 text-pink-700"
-                        } px-2 py-1 rounded text-xs`}
-                      >
-                        {skill}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-              </motion.div>
-            );
-          })}
-        </div>
       </div>
 
       {/* Figma Modal */}
