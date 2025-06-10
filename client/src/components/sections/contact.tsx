@@ -65,7 +65,7 @@ export default function ContactSection() {
       const url = window.URL.createObjectURL(blob);
       const a = document.createElement("a");
       a.href = url;
-      a.download = "Alex_Chen_Resume.pdf";
+      a.download = "Shyamali_Panda_Resume.pdf";
       document.body.appendChild(a);
       a.click();
       window.URL.revokeObjectURL(url);

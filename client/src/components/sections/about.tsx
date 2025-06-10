@@ -32,7 +32,7 @@ export default function AboutSection() {
           <div className="flex flex-col lg:flex-row gap-8">
             <div className="lg:w-1/3">
               <img
-                src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&h=500"
+                src="/shyamali.jpeg"
                 alt="Shyamali Panda - Process Designer"
                 className="rounded-2xl shadow-lg w-full max-w-sm float-left mr-8 mb-4 lg:mb-0"
               />

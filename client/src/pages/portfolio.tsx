@@ -5,6 +5,7 @@ import AboutSection from "@/components/sections/about";
 import EducationSection from "@/components/sections/education";
 import ExperienceSection from "@/components/sections/experience";
 import ProjectsSection from "@/components/sections/projects";
+import CertificationSection from "@/components/sections/certifications";
 import ContactSection from "@/components/sections/contact";
 // import FigmaModal from "@/components/figma-modal";
 // import Chatbot from "@/components/sections/chatbot";
@@ -38,6 +39,7 @@ export default function Portfolio() {
       <EducationSection />
       <ExperienceSection />
       <ProjectsSection />
+      <CertificationSection />
       <ContactSection />
       {/* <FigmaModal /> */}
       

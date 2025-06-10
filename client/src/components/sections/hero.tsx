@@ -1,6 +1,10 @@
 import { motion } from "framer-motion";
 import { PencilRuler, Palette } from "lucide-react";
 import { trackEvent } from "@/lib/analytics";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faEnvelope, faP, faPhone } from '@fortawesome/free-solid-svg-icons';
+import { faLinkedin } from '@fortawesome/free-brands-svg-icons';
+
 
 export default function HeroSection() {
   const handleNavClick = (href: string) => {
@@ -25,6 +29,24 @@ export default function HeroSection() {
           <h1 className="text-5xl md:text-7xl font-playfair font-bold mb-6">
             <span className="gradient-text">Shyamali Panda</span>
           </h1>
+          <div style={{display: "flex", marginTop: "20px", justifyContent: "center", marginBottom: "20px"}}>
+          <a href={"mailto:shyamalijsr790@gmail.com"} 
+              className="icon-link-home"
+            ><FontAwesomeIcon icon={faEnvelope} className='fa-2xl pe-3 ps-3'/>
+            </a>
+            <a href={"https://www.linkedin.com/in/shyamali-panda-6152a1185/"} 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="icon-link-home"
+            >
+              <FontAwesomeIcon icon={faLinkedin} className='fa-2xl pe-2 ps-1'/>
+              </a>
+              <a href={"#contact"} 
+              className="icon-link-home"
+            >
+              <FontAwesomeIcon icon={faPhone} className='fa-2xl ps-3' />
+              </a>
+          </div>
           <p className="text-xl md:text-2xl text-slate mb-8 max-w-3xl mx-auto leading-relaxed">
           From app curation to user flows — crafting seamless journeys that lead from content to product.
           </p>
@@ -45,7 +67,7 @@ export default function HeroSection() {
                 trackEvent('resume_download', 'conversion', 'hero_section');
                 const link = document.createElement("a");
                 link.href = "/api/resume";
-                link.download = "Alex_Chen_Resume.pdf";
+                link.download = "Shyamali_Panda_Resume.pdf";
                 document.body.appendChild(link);
                 link.click();
                 document.body.removeChild(link);

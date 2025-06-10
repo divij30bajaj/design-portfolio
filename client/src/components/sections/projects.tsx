@@ -11,13 +11,13 @@ export default function ProjectsSection() {
     {
       title: "Kashibot: Conversational Design for Heritage Sites | Banaras Hindu University | August 2023",
       description: "A multilingual chatbot built to enhance the tourist experience across Varanasi's major temples, integrating real-time info on aarti schedules, tickets, locations, and cultural insights in Hindi, English, and Telugu. Developed full conversation flows, bot and user personas, and architecture on Figma.",
-      image: "https://images.unsplash.com/photo-1551650975-87deedd944c3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1200&h=800",
+      image: "/kashibot.png",
       hasFigma: true,
     },
     {
       title: "Respin Transcription Proect | IISC, Bangalore | March 2023",
       description: "Conducted phonetic transcription of Hindi audio files collected manually from native speakers related to Agriculture and Finance sectors",
-      image: "https://images.unsplash.com/photo-1563986768494-4dee2763ff3f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1200&h=800",
+      image: "/audio-hindi.png",
       impact: [
         { description: "Worked closely with tools like Rev, Wavesurfer" },
       ],
@@ -26,7 +26,7 @@ export default function ProjectsSection() {
     {
       title: "Hindi Morphological Generator | Banaras Hindu University |February 2023",
       description: "Built a Python-based NLP tool to generate root forms and inflected Hindi nouns",
-      image: "https://images.unsplash.com/photo-1563986768494-4dee2763ff3f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1200&h=800",
+      image: "/python-hindi.png",
       impact: [
         { description: "Automated morphological analysis for gender, number, and case variations." },
       ],

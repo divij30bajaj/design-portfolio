@@ -20,6 +20,7 @@ export default function Navigation() {
     { href: "#education", label: "Education" },
     { href: "#experience", label: "Experience" },
     { href: "#projects", label: "Projects" },
+    { href: "#certifications", label: "Certifications"},
     { href: "#contact", label: "Contact" },
   ];
 
@@ -45,7 +46,7 @@ export default function Navigation() {
             <div className="flex-shrink-0">
               <h1 className={`text-xl font-semibold text-secondary transition-opacity duration-300 ${
                 isScrolled ? "opacity-100" : "opacity-0"
-              }`}>Alex Chen</h1>
+              }`}>Shyamali Panda</h1>
             </div>
             
             {/* Desktop Navigation */}

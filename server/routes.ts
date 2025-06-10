@@ -44,7 +44,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
   // Resume download
   app.get("/api/resume", (req, res) => {
     const resumePath = path.join(process.cwd(), "public", "resume.pdf");
-    res.download(resumePath, "Alex_Chen_Resume.pdf", (err) => {
+    res.download(resumePath, "Shyamali_Panda_Resume.pdf", (err) => {
       if (err) {
         res.status(404).json({ 
           success: false, 
