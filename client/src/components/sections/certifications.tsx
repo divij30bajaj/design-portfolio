@@ -35,7 +35,7 @@ export default function CertificationSection() {
   ];
 
   return (
-    <section id="certifications" className="py-20 bg-gradient-to-br from-blue-50 to-indigo-50">
+    <section id="certifications" className="py-20" style={{background: 'linear-gradient(to bottom,rgb(10, 7, 41), rgb(4, 3, 16))'}}>
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           ref={headerRef}
@@ -44,8 +44,8 @@ export default function CertificationSection() {
           transition={{ duration: 0.8, ease: "easeOut" }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl font-playfair font-bold mb-4 text-secondary">Certifications</h2>
-          <p className="text-xl text-slate max-w-2xl mx-auto">
+          <h2 className="text-4xl font-playfair font-bold mb-4 text-secondary" style={{ color: "white"}}>Certifications</h2>
+          <p className="text-xl text-slate max-w-2xl mx-auto" style={{ color: "white"}}>
           Credentials validating my expertise and commitment to continuous professional growth.
           </p>
         </motion.div>
@@ -66,10 +66,10 @@ export default function CertificationSection() {
               >
                 <div className="flex flex-col md:flex-row md:items-center md:justify-between">
                   <div className="flex-1">
-                    <h3 className="text-2xl font-semibold text-secondary mb-2">
+                    <h3 className="text-2xl font-semibold text-secondary mb-2" style={{color: '#7700ff'}}>
                       {certificate.name}
                     </h3>
-                    <p className="text-primary font-medium mb-2">
+                    <p className="text-primary font-medium mb-2" style={{fontWeight: 'bold'}}>
                       {certificate.institution}
                     </p>
                     <p className="text-slate mb-4">
@@ -77,7 +77,7 @@ export default function CertificationSection() {
                     </p>
                   </div>
                   <div className="mt-4 md:mt-0 md:ml-8 text-right">
-                    <p className="text-2xl font-bold text-accent">
+                    <p className="text-2xl text-accent">
                       <a href={certificate.link}>View Certificate</a>
                     </p>
                   </div>

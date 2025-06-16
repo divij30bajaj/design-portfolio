@@ -46,7 +46,7 @@ export default function Navigation() {
             <div className="flex-shrink-0">
               <h1 className={`text-xl font-semibold text-secondary transition-opacity duration-300 ${
                 isScrolled ? "opacity-100" : "opacity-0"
-              }`}>Shyamali Panda</h1>
+              }`}  style={{color: "white"}}>Shyamali Panda</h1>
             </div>
             
             {/* Desktop Navigation */}
@@ -56,7 +56,8 @@ export default function Navigation() {
                   <button
                     key={item.href}
                     onClick={() => handleNavClick(item.href)}
-                    className="text-slate hover:text-primary transition-colors duration-300 font-medium"
+                    className="transition-colors duration-300 font-medium"
+                    style={{color: "white"}}
                   >
                     {item.label}
                   </button>

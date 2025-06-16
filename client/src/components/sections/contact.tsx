@@ -8,13 +8,12 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
-import { useToast } from "@/hooks/use-toast";
 import { insertContactSchema, type InsertContact } from "@shared/schema";
 import { apiRequest } from "@/lib/queryClient";
 import { useScrollReveal } from "@/hooks/use-scroll-reveal";
+import { trackEvent } from "@/lib/analytics";
 
 export default function ContactSection() {
-  const { toast } = useToast();
   const { ref: headerRef, isVisible: headerVisible } = useScrollReveal();
   const { ref: contactInfoRef, isVisible: contactInfoVisible } = useScrollReveal();
   const { ref: formRef, isVisible: formVisible } = useScrollReveal();
@@ -35,18 +34,11 @@ export default function ContactSection() {
       return response.json();
     },
     onSuccess: () => {
-      toast({
-        title: "Message sent successfully!",
-        description: "Thank you for reaching out. I'll get back to you soon.",
-      });
+      alert("Message sent successfully!");
       form.reset();
     },
     onError: (error: any) => {
-      toast({
-        title: "Failed to send message",
-        description: error.message || "Please try again later.",
-        variant: "destructive",
-      });
+      alert("Failed to send message" + (error.message || "Please try again later."));
     },
   });
 
@@ -70,17 +62,8 @@ export default function ContactSection() {
       a.click();
       window.URL.revokeObjectURL(url);
       document.body.removeChild(a);
-      
-      toast({
-        title: "Resume downloaded",
-        description: "Thank you for your interest!",
-      });
     } catch (error) {
-      toast({
-        title: "Download failed",
-        description: "Resume is currently unavailable. Please contact me directly.",
-        variant: "destructive",
-      });
+      alert("Resume is currently unavailable. Please contact me directly.");
     }
   };
 
@@ -104,7 +87,7 @@ export default function ContactSection() {
   ];
 
   return (
-    <section id="contact" className="py-20 bg-secondary text-white">
+    <section id="contact" className="py-20" style={{ background: "linear-gradient(to bottom, rgb(4, 3, 16), rgb(48, 42, 118))"}}>
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           ref={headerRef}
@@ -113,7 +96,7 @@ export default function ContactSection() {
           transition={{ duration: 0.8, ease: "easeOut" }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl font-playfair font-bold mb-4">Let's Work Together</h2>
+          <h2 className="text-4xl font-playfair font-bold mb-4" style={{ color: "white" }}>Let's Work Together</h2>
           <p className="text-xl text-gray-300 max-w-2xl mx-auto">
             Ready to create something amazing? I'd love to hear about your project and discuss how we can bring your vision to life.
           </p>
@@ -127,7 +110,7 @@ export default function ContactSection() {
             animate={contactInfoVisible ? { opacity: 1, x: 0 } : { opacity: 0, x: -30 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
           >
-            <h3 className="text-2xl font-semibold mb-8">Get In Touch</h3>
+            <h3 className="text-2xl font-semibold mb-8" style={{ color: "white" }}>Get In Touch</h3>
             <div className="space-y-6">
               {contactInfo.map((info, index) => (
                 <motion.div
@@ -141,7 +124,7 @@ export default function ContactSection() {
                     <info.icon className="text-white w-5 h-5" />
                   </div>
                   <div>
-                    <p className="font-medium">{info.title}</p>
+                    <p className="font-medium" style={{ color: "white" }}>{info.title}</p>
                     <p className="text-gray-400">{info.subtitle}</p>
                   </div>
                 </motion.div>
@@ -149,17 +132,18 @@ export default function ContactSection() {
             </div>
             
             {/* Resume Download */}
-            <div className="mt-8 pt-8 border-t border-gray-600">
-              <Button
-                onClick={handleResumeDownload}
-                className="inline-flex items-center space-x-3 bg-accent text-white px-6 py-3 rounded-lg hover:bg-amber-600 transition-all duration-300"
-              >
-                <Download className="w-4 h-4" />
-                <span>Download Resume</span>
-              </Button>
-            </div>
-            
 
+            <motion.button
+              onClick={() => {
+                trackEvent('resume_download', 'conversion', 'hero_section');
+                handleResumeDownload();
+              }}
+              className="mt-8 border-2 border-white text-white px-8 py-4 rounded-full transition-colors duration-300 font-medium hover:bg-white hover:text-purple-700"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              Download Resume
+            </motion.button>
           </motion.div>
           
           {/* Contact Form */}
@@ -244,14 +228,15 @@ export default function ContactSection() {
                     </FormItem>
                   )}
                 />
-                
-                <Button
+                <motion.button
                   type="submit"
                   disabled={contactMutation.isPending}
-                  className="w-full bg-primary text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-all duration-300 font-medium"
+                  className="w-full mt-8 border-2 border-white text-white px-8 py-4 rounded-full transition-colors duration-300 font-medium hover:bg-white hover:text-purple-700"
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
                 >
                   {contactMutation.isPending ? "Sending..." : "Send Message"}
-                </Button>
+                </motion.button>
               </form>
             </Form>
           </motion.div>

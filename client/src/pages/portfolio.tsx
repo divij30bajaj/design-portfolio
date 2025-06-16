@@ -8,33 +8,19 @@ import ProjectsSection from "@/components/sections/projects";
 import CertificationSection from "@/components/sections/certifications";
 import ContactSection from "@/components/sections/contact";
 // import FigmaModal from "@/components/figma-modal";
-// import Chatbot from "@/components/sections/chatbot";
+import Chatbot from "@/components/sections/chatbot";
+import { steps } from "../chatbot-content.tsx"
 
 export default function Portfolio() {
   useEffect(() => {
     document.title = "Shyamali Panda - Process Designer";
   }, []);
 
-  const steps = [
-    {
-      image: 'chatbot_step1.png',
-      message: 'Hello! I am your assistant. How can I help you today?',
-    },
-    {
-      image: 'chatbot_step2.png',
-      message: 'Please provide your name to get started.',
-    },
-    {
-      image: 'chatbot_step3.png',
-      message: 'Thank you, [User Name]! How can I assist you further?',
-    },
-  ];
-
   return (
     <div className="min-h-screen bg-neutral">
       <Navigation />
       <HeroSection />
-      {/* <Chatbot steps={steps}/> */}
+      <Chatbot steps={steps}/>
       <AboutSection />
       <EducationSection />
       <ExperienceSection />

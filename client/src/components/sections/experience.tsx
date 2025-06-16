@@ -12,12 +12,12 @@ export default function ExperienceSection() {
       period: "October 2023 - Present",
       description: "As the Hindi Localization Executive for Indus Appstore—a homegrown alternative to Google Play tailored for Indian regional users—I’ve led the end-to-end process of language adaptation, personalized app curation, and performance-driven content rollout. My role bridges content, design, and data, with a focus on improving discoverability and user engagement through scalable and structured workflow",
       achievements: [
-        "Scaled Hindi installs from 24K to 75K in 12 months through curated app collections, push campaigns, and homepage optimizations.",
-        "Boosted Installers-to-DAU conversion from 18% to 58% by refining content flow logic and prioritizing high-intent app placements.",
-        "Doubled average installs per user from 0.25 to 0.55, enhancing user journeys with trend-based and category-specific content.",
-        "Maintained a steady 15–18% DAU contribution from Hindi content, showcasing strong regional engagement.",
-        "Spearheaded an ongoing Transliteration Tool Project using phonemic mapping—leading a team of 11 to automate app title transliteration, reducing manual effort and turnaround time by 40%.",
-        "Authored SOPs for localization and rollout processes—cutting content release time by 30% and enabling smooth cross-functional handoffs.",
+        "<b>Scaled Hindi installs from 24K to 75K in 12 months</b> through curated app collections, push campaigns, and homepage optimizations.",
+        "Boosted Installers-to-DAU conversion from <b>18% to 58%</b> by refining content flow logic and prioritizing high-intent app placements.",
+        "<b>Doubled average installs per user from 0.25 to 0.55</b>, enhancing user journeys with trend-based and category-specific content.",
+        "Maintained a <b>steady 15–18% DAU</b> contribution from Hindi content, showcasing strong regional engagement.",
+        "Spearheaded an ongoing Transliteration Tool Project using phonemic mapping—<b>leading a team of 11</b> to automate app title transliteration, reducing manual effort and turnaround time by 40%.",
+        "Authored SOPs for localization and rollout processes—<b>cutting content release time by 30%</b> and enabling smooth cross-functional handoffs.",
         "Developed a modular curation system to support multilingual scaling and reduce dependency on manual tagging."
       ],
       icon: Briefcase,
@@ -29,8 +29,8 @@ export default function ExperienceSection() {
       period: "February 2023- September 2023",
       description: "Worked on building Web3 gamer-centric virtual support experiences while supporting content operations, SEO, and community engagement.",
       achievements: [
-        "Designed and deployed FAQ-based conversational flows on FreshDesk for virtual assistant for the platform.",
-        "Led weekly Ask Me Anything (AMA) sessions with gamers to understand pain points and improve platform onboarding—personally hosted and transcribed sessions for content insights.",
+        "<b>Designed and deployed FAQ-based conversational flows</b> on FreshDesk for virtual assistant for the platform.",
+        "Led weekly Ask Me Anything (AMA) sessions with gamers to <b>understand pain points</b> and improve platform onboarding—personally hosted and transcribed sessions for content insights.",
         "Conducted keyword research and content optimization to boost SEO visibility and organic reach for Web 3 gaming-related support content."
       ],
       icon: Rocket,
@@ -39,7 +39,7 @@ export default function ExperienceSection() {
   ];
 
   return (
-    <section id="experience" className="py-20 bg-white">
+    <section id="experience" className="py-20" style={{ background: "linear-gradient(to bottom, rgb(4, 3, 16), rgb(48, 42, 118))"}}>
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           ref={headerRef}
@@ -48,8 +48,8 @@ export default function ExperienceSection() {
           transition={{ duration: 0.8, ease: "easeOut" }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl font-playfair font-bold mb-4 text-secondary">Work Experience</h2>
-          <p className="text-xl text-slate max-w-2xl mx-auto">
+          <h2 className="text-4xl font-playfair font-bold mb-4 text-secondary" style={{ color: "white"}}>Work Experience</h2>
+          <p className="text-xl text-slate max-w-2xl mx-auto" style={{ color: "white"}}>
             Professional journey spanning startups to enterprise, solving complex design challenges.
           </p>
         </motion.div>
@@ -84,10 +84,10 @@ export default function ExperienceSection() {
                   </div>
                   
                   <div className="flex-1">
-                    <h3 className="text-2xl font-semibold text-secondary mb-2">
+                    <h3 className="text-2xl font-semibold text-secondary mb-2" style={{color: '#7700ff'}}>
                       {experience.title}
                     </h3>
-                    <p className="text-primary font-medium text-lg mb-4">
+                    <p className="text-primary font-medium text-lg mb-4" style={{ fontWeight: "bold"}}>
                       {experience.company}
                     </p>
                     <p className="text-slate mb-4 leading-relaxed">
@@ -97,7 +97,7 @@ export default function ExperienceSection() {
                       {experience.achievements.map((achievement, i) => (
                         <li key={i} className="flex items-start">
                           <span className="text-primary mr-2 mt-1">•</span>
-                          {achievement}
+                          <p dangerouslySetInnerHTML={{ __html: achievement}}/>
                         </li>
                       ))}
                     </ul>
