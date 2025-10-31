@@ -9,6 +9,14 @@ export default function ProjectsSection() {
 
   const mainProjects = [
     {
+      title: "Language Data Contribution",
+      institute: "IIT Madras & Central Ministry",
+      time: "Oct 2025 - Present",
+      description: "Collaborating with IIT Madras Language And Analytical team on a Central Ministry-funded initiative to enhance educational content accessibility. Key contributions involve large-scale data collection, translation, annotation, filtering, and quality analysis of Hindi and English educational videos.",
+      image: "/iitm.png",
+      hasFigma: false,
+    },
+    {
       title: "Kashibot: Conversational Design for Heritage Sites",
       institute: "Banaras Hindu University",
       time: "August 2023",

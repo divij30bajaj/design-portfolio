@@ -12,6 +12,8 @@ export default function ExperienceSection() {
       period: "October 2023 - Present",
       description: "As the Hindi Localization Executive for Indus Appstore—a homegrown alternative to Google Play tailored for Indian regional users—I’ve led the end-to-end process of language adaptation, personalized app curation, and performance-driven content rollout. My role bridges content, design, and data, with a focus on improving discoverability and user engagement through scalable and structured workflow",
       achievements: [
+        "Spearheaded the technical design and implementation of a <b>rule-based Transliteration Tool</b>, reducing manual content preparation and localization work <b>by 60%</b>.",
+        "Leveraged <b>Qlik Sense analytics</b> to strategically curate homepage collections, increasing regional app installs and engagement <b>by 87%</b>.",
         "<b>Scaled Hindi installs from 24K to 75K in 12 months</b> through curated app collections, push campaigns, and homepage optimizations.",
         "Boosted Installers-to-DAU conversion from <b>18% to 58%</b> by refining content flow logic and prioritizing high-intent app placements.",
         "<b>Doubled average installs per user from 0.25 to 0.55</b>, enhancing user journeys with trend-based and category-specific content.",
