@@ -5,17 +5,18 @@ export default function AboutSection() {
   const { ref: contentRef, isVisible: contentVisible } = useScrollReveal();
 
   const skills = [
-    "User Experience Design",
-    "User Research",
-    "Figma",
-    "Freshdesk",
-    "Strapi",
-    "CMS",
-    "TMS",
-    "Qliksense",
+    "Python",
+    "NLTK",
+    "Pandas",
+    "NumPy",
+    "Git",
+    "Scripting for NLP",
+    "SQL",
+    "Natural Language Understanding",
+    "Natural Language Generation",
     "JIRA",
-    "Brahma Fabricator",
-    "Python"
+    "Morphological Analysis",
+    "Phonetic Transcription"
   ];
 
   return (
@@ -40,7 +41,7 @@ export default function AboutSection() {
             
             <div className="lg:w-2/3">
               <p className="text-lg text-slate mb-6 leading-relaxed" style={{color: "white"}}>
-              I’ve always been drawn to how things work behind the scenes. In my current role, I curate Hindi content and app experiences for the Indus Appstore across Xiaomi and Lava devices. I love creating process flows, breaking down data, and designing systems that feel intuitive. Chatbots and language tech fascinate me, and I’m now working toward a transition into process design, where I aim to grow into a product leadership role.
+              I’ve always been curious about how language systems work behind the scenes. As a Computational Linguist, I design multilingual NLU and NLG pipelines and build rule-based NLP solutions that make digital experiences more intuitive and accessible. I enjoy working closely with large-scale language data, setting up human-in-the-loop annotation workflows, and using Python-driven automation to bring structure to linguistic complexity. Language technology - especially conversational AI and multilingual user experiences - continues to fascinate me, and I’m keen to grow into roles where I can shape data-centric processes and scalable language systems that impact real users.
               </p>
               
               {/* Skills Section */}

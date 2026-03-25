@@ -48,7 +48,7 @@ export default function HeroSection() {
               </a>
           </div>
           <p className="text-xl md:text-2xl text-slate mb-8 max-w-3xl mx-auto leading-relaxed" style={{color: "white"}}>
-          From app curation to user flows — crafting seamless journeys that lead from content to product.
+          Turning multilingual data into meaningful conversations - designing language experiences that feel simple, natural, and scalable.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
           <motion.button
